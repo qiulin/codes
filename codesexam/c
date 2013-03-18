@@ -1,0 +1,168 @@
+
+========================================================
+--------------------------------------------------------
+
+
+VIM - Vi IMproved 7.3 (2010 Aug 15)
+Included patches: 1-763, 765-831
+Compiled by 'http://www.opensuse.org/'
+Huge version without GUI.
+  Features included (+) or not (-):
++arabic          +insert_expand   +rightleft
++autocmd         +jumplist        +ruby
+-balloon_eval    +keymap          +scrollbind
+-browse          +langmap         +signs
+++builtin_terms  +libcall         +smartindent
++byte_offset     +linebreak       +sniff
++cindent         +lispindent      +startuptime
++clientserver    +listcmds        +statusline
++clipboard       +localmap        -sun_workshop
++cmdline_compl   -lua             +syntax
++cmdline_hist    +menu            +tag_binary
++cmdline_info    +mksession       +tag_old_static
++comments        +modify_fname    -tag_any_white
++conceal         +mouse           +tcl
++cryptv          -mouseshape      +terminfo
++cscope          +mouse_dec       +termresponse
++cursorbind      +mouse_gpm       +textobjects
++cursorshape     -mouse_jsbterm   +title
++dialog_con      +mouse_netterm   -toolbar
++diff            +mouse_sgr       +user_commands
++digraphs        -mouse_sysmouse  +vertsplit
+-dnd             +mouse_urxvt     +virtualedit
+-ebcdic          +mouse_xterm     +visual
++emacs_tags      +multi_byte      +visualextra
++eval            +multi_lang      +viminfo
++ex_extra        -mzscheme        +vreplace
++extra_search    +netbeans_intg   +wildignore
++farsi           +path_extra      +wildmenu
++file_in_path    +perl            +windows
++find_in_path    +persistent_undo +writebackup
++float           +postscript      +X11
++folding         +printer         +xfontset
+-footer          +profile         -xim
++fork()          +python          +xsmp_interact
++gettext         -python3         +xterm_clipboard
+-hangul_input    +quickfix        -xterm_save
++iconv           +reltime         
+   system vimrc file: "/etc/vimrc"
+     user vimrc file: "$HOME/.vimrc"
+      user exrc file: "$HOME/.exrc"
+  fall-back for $VIM: "/etc"
+ f-b for $VIMRUNTIME: "/usr/share/vim/current"
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H   -I/usr/local/include  -fmessage-length=0 -O2 -Wall -D_FORTIFY_SOURCE=1 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -Wall -pipe -fno-strict-aliasing     -I/usr/include  -D_LARGEFILE64_SOURCE=1  
+Linking: gcc   -L.  -rdynamic -Wl,-export-dynamic  -Wl,-E -Wl,-rpath,/usr/lib/perl5/5.16.2/x86_64-linux-thread-multi/CORE   -L/usr/local/lib -Wl,--as-needed -o vim    -lSM -lICE -lXt -lX11 -lSM -lICE  -lm -lnsl   -ltinfo -lacl -lattr -lgpm -ldl   -Wl,-E -Wl,-rpath,/usr/lib/perl5/5.16.2/x86_64-linux-thread-multi/CORE  -L/usr/local/lib64 -fstack-protector  -L/usr/lib/perl5/5.16.2/x86_64-linux-thread-multi/CORE -lperl -lm -ldl -lcrypt -lpthread -lpython2.7 -lpthread -ldl -lutil -lm -Xlinker -export-dynamic  -L/usr/lib64 -ltcl8.5 -ldl -lieee -lm -lruby1.9 -lpthread -lrt -ldl -lcrypt -lm  -L/usr/lib64   
+UpdateAndRead() called with parameter 0
+Running UpdateTypesFile function at 20130318-214325
+Current directory is /home/xcodeman/workspace/codes/codesexam
+Current file is /home/xcodeman/workspace/codes/codesexam/bubblesort.c
+Release Info:{'VersionInfo': {'release_revid': 'N/A', 'release_clean': 'N/A', 'release_date': 'N/A'}, 'LastRelease': '2.1.5'}
+Global options (g:TagHighlightSettings): {'StoredDebugFile': 'None', 'DebugFile': 'c', 'StoredDebugLevel': 'None', 'DebugLevel': 'Information'}
+Buffer options (b:TagHighlightSettings): {}
+Locating file CONFIG with suffix 
+Priority: ['Explicit', 'UpFromFile', 'CurrentDirectory']
+Searching up from /home/xcodeman/workspace/codes/codesexam for ['tags', 'taghl_config.txt']
+Trying /home/xcodeman/workspace/codes/codesexam
+Found match: /home/xcodeman/workspace/codes/codesexam (/home/xcodeman/workspace/codes/codesexam/tags)
+Found location with UpFromFile
+Found file location: /home/xcodeman/workspace/codes/codesexam/taghl_config.txt
+File does not exist
+No project config file
+Project config file does not exist
+CtagsExecutable not set, searching for 'ctags' in path
+Locating file TAGS with suffix 
+Priority: ['Explicit', 'UpFromFile', 'CurrentDirectory']
+Searching up from /home/xcodeman/workspace/codes/codesexam for ['tags', 'taghl_config.txt']
+Trying /home/xcodeman/workspace/codes/codesexam
+Found match: /home/xcodeman/workspace/codes/codesexam (/home/xcodeman/workspace/codes/codesexam/tags)
+Found location with UpFromFile
+Found file location: /home/xcodeman/workspace/codes/codesexam/tags
+File exists
+Locating file TYPES with suffix *
+Priority: ['Explicit', 'UpFromFile', 'CurrentDirectory']
+Searching up from /home/xcodeman/workspace/codes/codesexam for ['tags', 'taghl_config.txt']
+Trying /home/xcodeman/workspace/codes/codesexam
+Found match: /home/xcodeman/workspace/codes/codesexam (/home/xcodeman/workspace/codes/codesexam/tags)
+Found location with UpFromFile
+Found file location: /home/xcodeman/workspace/codes/codesexam/types_*.taghl
+File does not exist
+No source dir set
+Current directory is now /home/xcodeman/workspace/codes/codesexam
+Using tags file directory
+Running generator with options:
+ - g:TagHighlightSettings: {'StoredDebugFile': 'None', 'DebugFile': 'c', 'StoredDebugLevel': 'None', 'DebugLevel': 'Information'}
+ - b:TagHighlightConfigFileOptions: UNSET
+ - b:TagHighlightSettings: {'SourceDir': '/home/xcodeman/workspace/codes/codesexam', 'TypesFileLocation': '/home/xcodeman/workspace/codes/codesexam', 'CtagsFileLocation': '/home/xcodeman/workspace/codes/codesexam', 'CtagsExeFull': '/usr/bin/ctags'}
+Python variant is if_pyth
+Python Command is py
+Python Path is 
+Python version reported as: 2.7.3 (default, Apr 14 2012, 08:58:41) [GCC]
+Using variant: if_pyth
+Unhandled run option: StoredDebugFile
+Unhandled run option: StoredDebugLevelRunning types highlighter generator
+Release:2.1.5
+Version:{'date': 'Unreleased', 'revision_id': 'Unreleased', 'clean': 'Unreleased'}
+Options:{'source_root': '/home/xcodeman/workspace/codes/codesexam', 'debug_file': 'c', 'debug_level': 'Information', 'types_file_location': '/home/xcodeman/workspace/codes/codesexam', 'ctags_file_dir': '/home/xcodeman/workspace/codes/codesexam', 'ctags_exe_full': '/usr/bin/ctags'}
+Generating tag file
+Generating Tags
+Command arguments: ['--languages=c#,c,java,vhdl,scala,python,perl,fortran,matlab,go,php,ruby,c++', '-f', '/home/xcodeman/workspace/codes/codesexam/tags', '--exclude=docs', '--exclude=Documentation', '--recurse', '.']
+Writing types file
+Is Keyword is ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '_']
+Type priority list: ['CTagsMember', 'CTagsFunction', 'CTagsType', 'CTagsDefinedName']
+Filename is /home/xcodeman/workspace/codes/codesexam/types_c.taghl
+
+
+UpdateTypesFile() complete, current directory is now /home/xcodeman/workspace/codes/codesexam
+Locating file CONFIG with suffix 
+Priority: ['Explicit', 'UpFromFile', 'CurrentDirectory']
+Searching up from /home/xcodeman/workspace/codes/codesexam for ['tags', 'taghl_config.txt']
+Trying /home/xcodeman/workspace/codes/codesexam
+Found match: /home/xcodeman/workspace/codes/codesexam (/home/xcodeman/workspace/codes/codesexam/tags)
+Found location with UpFromFile
+Found file location: /home/xcodeman/workspace/codes/codesexam/taghl_config.txt
+File does not exist
+No project config file
+Reading types with ExtensionLookup at 20130318-214326
+Locating file CONFIG with suffix 
+Priority: ['Explicit', 'UpFromFile', 'CurrentDirectory']
+Searching up from /home/xcodeman/workspace/codes/codesexam for ['tags', 'taghl_config.txt']
+Trying /home/xcodeman/workspace/codes/codesexam
+Found match: /home/xcodeman/workspace/codes/codesexam (/home/xcodeman/workspace/codes/codesexam/tags)
+Found location with UpFromFile
+Found file location: /home/xcodeman/workspace/codes/codesexam/taghl_config.txt
+File does not exist
+No project config file
+Reading types of suffix c for file bubblesort.c
+Searching for types file
+Locating file TYPES with suffix c
+Priority: ['Explicit', 'UpFromFile', 'CurrentDirectory']
+Searching up from /home/xcodeman/workspace/codes/codesexam for ['tags', 'taghl_config.txt']
+Trying /home/xcodeman/workspace/codes/codesexam
+Found match: /home/xcodeman/workspace/codes/codesexam (/home/xcodeman/workspace/codes/codesexam/tags)
+Found location with UpFromFile
+Found file location: /home/xcodeman/workspace/codes/codesexam/types_c.taghl
+File exists
+Loading type highlighter file /home/xcodeman/workspace/codes/codesexam/types_c.taghl
+Searching for user libraries
+Library Dir: .
+Library List: []
+Finding library files for current file with suffix c
+Checking Qt4
+Library(Qt4): Checking MatchStart
+No match:Qt4
+Checking wxpython
+No match:wxpython
+Checking JDK
+No match:JDK
+Checking PySide
+No match:PySide
+Checking wxWidgets
+Library(wxWidgets): Checking MatchStart
+No match:wxWidgets
+Checking Android SDK
+No match:Android SDK
+Calling special handler TagHighlight#SpecialHandlers#CRainbowHandler
+Language handler for rainbow.vim compatibility
+ReadTypes complete
+Success with method Extension
+UpdateAndRead() complete

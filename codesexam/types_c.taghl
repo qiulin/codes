@@ -1,0 +1,5 @@
+syn keyword CTagsMember link data key
+syn keyword CTagsFunction SeqSearch IdxSearch bubblesort InsertSort main BinSearch
+syn keyword CTagsType NodeType IDX SeqList KeyType InfoType IdxType RecType
+syn keyword CTagsDefinedName MAXI MAXL
+

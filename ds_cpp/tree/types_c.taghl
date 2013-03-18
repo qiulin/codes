@@ -1,0 +1,6 @@
+syn keyword CTagsStructure BTnode
+syn keyword CTagsMember lchild rchild data m_root
+syn keyword CTagsFunction Locate RightChild Parent Clear LeftChild BinaryTree Depth IsEmpty Root
+syn keyword CTagsDefinedName _BINARYTREE_H
+syn keyword CTagsClass BinaryTree
+
