@@ -1,4 +1,4 @@
 codes
 =====
 
-some test codes and demoes
+some useful codes and demoes
