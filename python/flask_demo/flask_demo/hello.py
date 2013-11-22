@@ -54,6 +54,11 @@ def login():
         return render_template('login.html')
 
 
+@app.route('/tojson')
+def xtojson():
+    return render_template('tojson.html', msg='Hello World')
+
+
 #@app.route('/upload', methods=['GET', 'POST'])
 #def upload_file():
     #if request.method == 'POST':
