@@ -18,12 +18,11 @@
         <div class="container">
             <form class="form-signin" target="login" method="POST">
                 <h2 class="form-signin-heading">Please sign in</h2>
-                <div class="alert alert-info">
-                    {% with massages = get_flashed_messages() %}
-                        {% if messages %}
-                    {% endwith%}
-                </div>
-
+                {% if error %}
+                    <div class="alert alert-err">
+                    {{ error }}
+                    </div>
+                {% endif %}
                 <input type="text" name="username" class="form-control" placeholder="Email address" required autofocus>
                 <input type="password" name="password" class="form-control" placeholder="Password" required>
                 <label class="checkbox">
