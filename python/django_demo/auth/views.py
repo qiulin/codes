@@ -19,16 +19,14 @@ def login(request):
         form = LoginForm()
         return render(request, 'login')
 
-   pass
-
 
 def logout(request):
     pass
 
 
 # 登录表单
-class LoginForm(forms.Form):
-    '''Login From'''
-    error = forms.CharField()
-    username = forms.CharField(label=u"昵称", max_length=30, widget=forms.TextInput(attrs={'size': 20,}))
-    password = forms.PasswordInput(label=u'密码', max_length=30, widget=forms.PasswordInput(attrs={'size': 20,}))
+#class LoginForm(forms.Form):
+    #'''Login From'''
+    #error = forms.CharField()
+    #username = forms.CharField(label=u"昵称", max_length=30, widget=forms.TextInput(attrs={'size': 20,}))
+#    password = forms.PasswordInput(label=u'密码', max_length=30, widget=forms.PasswordInput(attrs={'size': 20,}))
