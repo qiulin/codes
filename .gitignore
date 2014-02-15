@@ -21,3 +21,6 @@ types_*
 
 # Python Virtualenv
 .env
+
+# Sqlite3 db file
+*.db

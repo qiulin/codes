@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'wbfeeds',
     'auth',
-    'book',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,11 +59,11 @@ WSGI_APPLICATION = 'django_demo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_demo',
-        'HOST': '/var/run/mysqld/mysqld.sock',
-        'USER': 'test',
-        'PASSWORD': 'test123',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': './django_demo.db',
+        'HOST': '',
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 
