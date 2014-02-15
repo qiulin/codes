@@ -12,6 +12,12 @@
 *.la
 *.a
 
+# Python bytecode
 *.pyc
+
+# Tags
 tags
 types_*
+
+# Python Virtualenv
+./env
