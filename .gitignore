@@ -20,4 +20,4 @@ tags
 types_*
 
 # Python Virtualenv
-./env
+.env
