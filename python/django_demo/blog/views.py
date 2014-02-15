@@ -4,7 +4,7 @@ import datetime
 # Create your views here.
 
 
-def hello(request):
+def index(request):
     return HttpResponse('Hello, World!')
 
 
