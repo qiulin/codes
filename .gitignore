@@ -24,3 +24,6 @@ types_*
 
 # Sqlite3 db file
 *.db
+
+# project file
+.ropeproject
