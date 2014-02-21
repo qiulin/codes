@@ -1,15 +1,30 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render, render_to_response, get_object_or_404
-from django.http import HttpResponseRedirect
 from django.contrib import auth
-
-
+from django.contrib.auth.forms import UserCreationForm
+from django import forms
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, render_to_response, get_object_or_404
+from django.views.decorators.csrf import csrf_protect
 def index(request):
     return render(request, 'index.html')
-def register(request):
+
+
+@csrf_protect
+def signup(request):
     '''
     注册'''
-    import pdb; pdb.set_trace()  # XXX BREAKPOINT
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            new_user = form.save()
+            return HttpResponseRedirect('/accounts/profile')
+    else:
+        form = UserCreationForm()
+        return render_to_response("signup.html", {'form': form})
+
+
+def profile(request):
+    return render(request, 'profile.html')
 
 
 def login(request):
@@ -23,8 +38,8 @@ def login(request):
             auth.login(request, user)
             return HttpResponseRedirect("/accounts/profile")
         else:
-            msg = "Invalid Password!"
-            return render(request, 'login.html', msg=msg)
+            msg = "Invalid Password"
+            return render_to_response('login.html', {'msg': msg})
 
 
 
