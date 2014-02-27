@@ -4,19 +4,12 @@
 from flask import render_template, request, session, redirect, url_for, escape, flash
 
 from flask_demo import app
-from flask_demo.utils import *
+from flask_demo import utils
 
 
 @app.route("/")
 def index():
-    if 'username' in session:
-        return "Logged in as %s" % escape(session['username'])
-    return 'You are not logged in'
-
-
-@app.route('/hello')
-def hell():
-    return "Hello World!"
+    return render_template('index.html')
 
 
 @app.route('/user/<username>')
@@ -39,8 +32,8 @@ def about():
     return 'The about page'
 
 
-@app.route('/login', methods=['POST', 'GET'])
-def login():
+@app.route('/signin', methods=['POST', 'GET'])
+def signin():
     error = None
     if request.method == 'POST':
         if request.form['username'] != 'admin' or \
@@ -50,16 +43,17 @@ def login():
             session['username'] = request.form['username']
             flash('You were successfully logged in')
             return redirect(url_for('index'))
-    return render_template('login.html', error=error)
+    return render_template('signin.html', error=error)
 
+@app.route('/signup', methods=['POST', 'GET'])
+def signup():
+    msg = None
+#    if request.method == 'POST':
+    #else:
+#        render_template('signup.html', msg=msg)
 
 @app.route('/tojson')
 def xtojson():
     return render_template('tojson.html', msg='Hello World')
 
 
-#@app.route('/upload', methods=['GET', 'POST'])
-#def upload_file():
-    #if request.method == 'POST':
-        #f = request.files['the_file']
-        #f.save('/root/work/python/' + secure_filename(f.filename))
