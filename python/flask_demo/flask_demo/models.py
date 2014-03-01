@@ -1,5 +1,5 @@
 from flask_demo import db
-
+from hashlib import md5
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -10,8 +10,17 @@ class User(db.Model):
     def __init__(self, username, email, password):
         self.username = username
         self.email = email
-        self.email = password
+        self.password = self.password_encrypt(password)
 
     def __repr__(self):
         return '<User %r>' % self.username
 
+    def password_encrypt(self, password):
+        en_password = md5(password)
+        return en_password.hexdigest()
+
+    def is_active(self):
+        return True
+
+    def get_id(self):
+        return unicode(id)

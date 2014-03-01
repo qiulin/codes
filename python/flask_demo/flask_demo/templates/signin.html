@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block header %}
+<title>SignIn</title>
+{% endblock header %}
+
+
+{% block body %}
+<div class="ui three column grid">
+    <div class="three wide column">
+    </div>
+    <div class="six wide column">
+        <div class="ui error form segment">
+            {% if error %}
+            <div class="ui error message">
+                <div class="header">{{ error }}</div>
+            </div>
+            {% endif %}
+            <div clas="three fields">
+                <form action="" method="post">
+                    {{ form.csrf_token }}
+                    <div class="field">
+                        <label>Email:</label>
+                        {{ form.email(placeholder="Email") }}
+                    </div>
+                    <div class="field">
+                        <label>Password:</label>
+                        {{ form.password() }}
+                    </div>
+                    {{ form.submit(class="ui blue submit button") }}
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="three wide column">
+    </div>
+
+</div>
+{% endblock body %}

@@ -3,4 +3,4 @@
 
 from flask_demo import app
 
-app.run(debug=True)
+app.run()

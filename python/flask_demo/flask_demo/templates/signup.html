@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block header %}
+<title>SignUp</title>
+<link ref="stylesheet" style="text/css" href="/static/ui/css/signup.css">
+{% endblock header %}
+
+
+{% block body %}
+<div class="ui three column grid">
+    <div class="three wide column">
+    </div>
+    <div class="six wide column">
+        <div class="ui error form segment">
+            {% if error%}
+            <div class="ui error message">
+                <div class="header">{{ error }}</div>
+            </div>
+            {% endif %}
+            <div class="four fields">
+                <form action="" method="post">
+                    {{ form.csrf_token }}
+                    <div class="field">
+                        <label>Username:</label>
+                        {{ form.username(placeholder="Username") }}
+                    </div>
+                    <div class="field">
+                        <lable>Email:</lable>
+                        {{ form.email(placeholder="Email")}}
+                    </div>
+                    <div class="field">
+                        <lable>Password:</lable>
+                        {{ form.password() }}
+                    </div>
+                    <div class="field">
+                        <lable>Password Confirm:</lable>
+                        {{ form.confirm() }}
+                    </div>
+                    {{ form.submit(class="ui blue submit button") }}
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="three wide column">
+    </div>
+
+</div>
+
+{% endblock body %}
