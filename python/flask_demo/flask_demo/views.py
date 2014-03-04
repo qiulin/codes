@@ -6,9 +6,9 @@ from flask import render_template, request, redirect, url_for
 from flask_demo import app, db
 from flask_demo.models import User
 from flask_demo.forms import SignupForm, SigninForm
-from flask_demo.utils import user_loader, user_validate
+from flask_demo.utils import user_loader
 
-from flask.ext.login import login_user, login_required
+from flask.ext.login import login_user, login_required, logout_user
 
 
 @app.route('/')
@@ -42,10 +42,14 @@ def signin():
     if request.method=="POST" and form.validate():
         email = form.email.data
         password = form.password.data
-        uid = user_validate(email, password)
+        uid = User.user_validate(email, password)
         if uid:
             user = user_loader(uid)
             login_user(user)
+            if user.is_authenticated():
+                return redirect(url_for('profile'))
+            else:
+                return redirect(url_for('index'))
             return redirect(url_for("profile"))
         else:
             error = "Email or Password was not correct."
@@ -53,9 +57,14 @@ def signin():
     else:
         return render_template("signin.html", form=form)
 
-
+@app.route('/logout')
 @login_required
+def logout():
+    logout_user()
+    return redirect(url_for("index"))
+
+
 @app.route('/profile', methods=['GET', 'POST'])
+@login_required
 def profile():
     return render_template("profile.html")
-

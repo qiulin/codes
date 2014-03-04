@@ -1,5 +1,5 @@
 from flask_demo import db
-from flask_demo.utils import password_encrypt
+from hashlib import md5
 
 
 class User(db.Model):
@@ -11,7 +11,20 @@ class User(db.Model):
     def __init__(self, username, email, password):
         self.username = username
         self.email = email
-        self.password = password_encrypt(password)
+        self.password = User.password_encrypt(password)
+
+    @staticmethod
+    def user_validate(email, password):
+        user = User.query.filter_by(email=email).first()
+        if user:
+            if user.password == User.password_encrypt(password):
+                return user.id
+        return None
+
+    @staticmethod
+    def password_encrypt(password):
+        en_password = md5(password)
+        return en_password.hexdigest()
 
     def __repr__(self):
         return '<User %r>' % self.username
@@ -19,8 +32,14 @@ class User(db.Model):
     def is_active(self):
         return True
 
+    def is_anonymous(self):
+        return False
+
     def get_id(self):
-        return unicode(id)
+        return unicode(self.id)
+
+    def is_authenticated(self):
+        return True
 
 
 class Post(db.Model):

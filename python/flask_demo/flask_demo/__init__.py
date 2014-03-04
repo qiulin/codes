@@ -22,8 +22,11 @@ app.secret_key = app.config['SECRET_KEY']
 
 db = SQLAlchemy(app)
 CsrfProtect(app)
+
 login_manager = LoginManager()
 login_manager.init_app(app)
 
 from flask_demo import views
 from flask_demo import models
+
+login_manager.login_view = "signin"
