@@ -99,7 +99,7 @@ handle_events(int epollfd, struct epoll_event *events, int num, int listenfd, ch
     int i;
     int fd;
     // 进行选好遍历
-    for (i = 0; i < num, i++)
+    for (i = 0; i < num; i++)
     {
         fd = events[i].data.fd;
         // 根据描述符的类型和事件类型进行处理
